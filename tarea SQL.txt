@@ -1,0 +1,9 @@
+
+select clients.id, clients.first_name, clients.last_name, clients.email, accounts.account_no, accounts.balance  from clients inner join accounts on clients.id = accounts.client_id;
+
+select  accounts.account_no, accounts.client_id, account_types.name  from accounts inner join account_types on accounts.type = account_types.id
+
+select  transactions.id, transactions.amount, transactions_types.name from transactions inner join transactions_types on transactions.transaction_type  = transactions_types.id;
+
+select  transactions.id, transactions.amount, transactions_types.name from transactions right join transactions_types on transactions.transaction_type  = transactions_types.id;
+
